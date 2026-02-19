@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Backend Engineer</title>
+    <style>
+        /* --- CSS Style (스타일 정의) --- */
+        :root {
+            --primary-color: #1a252f; /* 짙은 네이비 (신뢰감) */
+            --accent-color: #3498db;  /* 블루 (포인트) */
+            --bg-gray: #f8f9fa;       /* 배경색 */
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Meiryo', sans-serif; /* 일본어 가독성 폰트 */
+        }
+
+        body {
+            background-color: var(--bg-gray);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        /* 1. 헤더 (타이틀 영역) */
+        header {
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* 2. 메인 컨테이너 */
+        .container {
+            max-width: 900px; /* 너무 퍼지지 않게 중앙 정렬 */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 섹션 공통 스타일 */
+        section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 살짝 떠있는 카드 효과 */
+        }
+
+        h2 {
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        /* 자기소개 텍스트 */
+        .about-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            white-space: pre-line; /* 줄바꿈 반영 */
+        }
+
+        .highlight {
+            background: #eef7ff;
+            color: var(--accent-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* 프로젝트 리스트 */
+        .project-item {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .tech-stack {
+            font-size: 0.85rem;
+            color: #666;
+            background: #f1f1f1;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .project-desc {
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        /* 링크 버튼 그룹 */
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 8px 15px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            color: #555;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* 연락처 */
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            display: inline-block;
+            width: 80px;
+            color: var(--primary-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Backend Developer Portfolio</h1>
+        <p>Java / JSP / Servlet / Database</p>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h2>自己紹介 (About Me)</h2>
+            <div class="about-text">
+                <span class="highlight">JLPT  N2 取得</span>
+                <br><br>
+                <strong>「技術で価値を創出するエンジニア」</strong>
+                <br>
+                こんにちは。韓国でWeb開発を勉強しているバックエンドエンジニアです。
+                Java、Servlet、JSPを用いた開発経験があり、特にデータベース設計と効率的なクエリ処理に関心を持っています。
+                <br>
+                「News Sekai」や「GrandPrix Board」などのプロジェクトを通じて、
+                ユーザーの利便性を考慮したシステム設計と、保守性の高いコード作成を心がけています。
+                日本での就職を目指し、技術と日本語能力の向上に日々励んでいます。
+            </div>
+        </section>
+
+        <section>
+            <h2>Project History</h2>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">News Sekai (ニュース世界)</div>
+                    <div class="tech-stack">Java, Servlet, JSP, MySQL</div>
+                </div>
+                <div class="project-desc">
+                    <p>• <strong>概要:</strong> ユーザー参加型のニュース共有およびブログプラットフォーム</p>
+                    <p>• <strong>担当:</strong> データベース設計、MVCパターンによるサーバーサイド実装</p>
+                    <p>• <strong>特徴:</strong> 独自の階層型コメントアルゴリズムを実装し、議論の深さを視覚化しました。</p>
+                </div>
+                <div class="btn-group">
+                    <a href="https://docs.google.com/document/d/1wD6JIHMn7xytCwFzvQlXI29QbXRCiIpsDAyiBFAYR9Y/edit?usp=sharing" target="_blank" class="btn">📄 設計書 (Design)</a>
+                    <a href="https://youtu.be/VEIc2iIxvIU?si=CoN4Js1kB0mSHbRo" target="_blank" class="btn">🎥 デモ動画 (Video)</a>
+                    <a href="https://docs.google.com/presentation/d/1y0hxh1JQoIf0ZudNJ2qBjyKSv6YtXGvc/edit?usp=sharing&ouid=106775762111538991822&rtpof=true&sd=true" target="_blank" class="btn">📊 プレゼン資料 (PPT)</a>
+                    
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-title">GrandPrix Board (F1 Community)</div>
+                    <div class="tech-stack">Java, JSP, REST API</div>
+                </div>
+                <div class="project-desc">
+                    <p>• <strong>概要:</strong> F1レースデータと連動したファンコミュニティサイト</p>
+                    <p>• <strong>担当:</strong> 外部APIデータの処理、掲示板CRUD機能の実装</p>
+                    <p>• <strong>特徴:</strong> レース結果やドライバー情報を動的に表示し、ファンの交流を促進するUIを構築しました。</p>
+                </div>
+                <div class="btn-group">
+                    <a href="https://docs.google.com/document/d/1JUv6Uy3A9yMgt06c3ZLH4L-G-ElNKaBQdqvr6rsHBEU/edit?usp=sharing" target="_blank" class="btn">📄 設計書 (Design)</a>
+                    <a href="https://youtu.be/tVPsnKdR_cU" target="_blank" class="btn">🎥 デモ動画 (Video)</a>
+                    <a href="https://drive.google.com/file/d/106t3N23UmNWqz-lIcrZTdt9iHAZkEbS1/view?usp=sharing" target="_blank" class="btn">📊 プレゼン資料 (PPT)</a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Info</h2>
+            <div class="contact-info">
+                <p><span class="contact-label">Email</span> 履歴書を参考してください。</p>
+                
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
